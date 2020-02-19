@@ -15,10 +15,13 @@ const ui = (() => {
       if (code === 13) {
         e.preventDefault();
         weatherData.weather(search.value);
-        message.Text = '';
+        message.innerText = '';
         search.value = null;
       }
     });
+
+    app.userLocation();
+    app.setPosition();
   }
   return {dom,};
 })();

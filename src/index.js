@@ -5,5 +5,3 @@ import {app} from './js/app.js';
 
 // ui.userLocation();
 ui.dom();
-app.userLocation();
-app.setPosition();

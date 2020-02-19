@@ -1,4 +1,4 @@
-import {weatherData} from './weather'
+import {weatherData} from './weather';
 const app = (() => {
   let location;
   const message = document.querySelector('.message');

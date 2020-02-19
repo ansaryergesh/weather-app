@@ -7,9 +7,9 @@ const ui = (() => {
   const search = document.querySelector('.search');
   const message = document.querySelector('.message');
   const body = document.querySelector('body');
-
-
+  const weatherContainer = document.querySelector('.weatherContainer');
   const dom = () => {
+    weatherContainer.style.background = "url('../images/01n.jpg')";
     search.addEventListener('keydown', (e) => {
       var code = (e.keyCode ? e.keyCode : e.which);
       if (code === 13) {
@@ -19,11 +19,14 @@ const ui = (() => {
         search.value = null;
       }
     });
-
     app.userLocation();
     app.setPosition();
   }
-  return {dom,};
+
+  const setBackground = (data) => {
+      weatherContainer.style.background = `url("../images/${data}.jpg")`;
+  }
+  return {dom,setBackground};
 })();
 
 export { ui };

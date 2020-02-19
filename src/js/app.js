@@ -22,11 +22,11 @@ const app = (() => {
   }
 
 
-  const checkCity = (latitude,longitude) => {
+  const checkCity = async(latitude,longitude) => {
     const apiKey = '607cb0d14a7ab93d6a5e4b35ab83ee70';
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
-    fetch(api)
+    await fetch(api)
         .then((response) => {
             let data = response.json();
             return data

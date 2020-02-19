@@ -26,16 +26,21 @@ body {
   position: relative;
   border: 3px solid rgb(154, 160, 154);
   padding: 20px;
-  color:rgb(255, 255, 255);
-  background-color: #152636;
-  background: linear-gradient(to bottom, #152636 1%,#87abca 100%);
-  p {
+  // background:rgba(19, 18, 18, 0.726) url("../images/01n.jpg");
+  background-size: cover;    
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;  
+  p,span {
     line-height: 0;
+    -webkit-text-stroke-width: .9px;
+    -webkit-text-stroke-color: rgb(107, 104, 104);
+    letter-spacing: 2px;
   }
 }
 
 .city {
-    text-align: center;
+    font-size: 25px;
     font-weight: bold;
 }
 .name {

@@ -22,7 +22,7 @@ const weatherData = (() => {
         country.innerText = data.sys.country;
         name.innerText= data.weather[0].description;
         tempature.innerText = Math.floor(data.main.temp - 273);
-        // ui.setBackground(data.weather[0].icon);
+        ui.setBackground(data.weather[0].icon);
       })
       .catch((error) => {
         message.innerText = 'Wrong city'

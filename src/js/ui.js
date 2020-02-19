@@ -9,7 +9,6 @@ const ui = (() => {
   const body = document.querySelector('body');
   const weatherContainer = document.querySelector('.weatherContainer');
   const dom = () => {
-    weatherContainer.style.background = "url('../images/01n.jpg')";
     search.addEventListener('keydown', (e) => {
       var code = (e.keyCode ? e.keyCode : e.which);
       if (code === 13) {
@@ -24,7 +23,7 @@ const ui = (() => {
   }
 
   const setBackground = (data) => {
-      weatherContainer.style.background = `url("../images/${data}.jpg")`;
+    weatherContainer.style.backgroundImage = `url("https://raw.githubusercontent.com/ansaryergesh/weather-app/master/src/images/${data}.jpg")`;
   }
   return {dom,setBackground};
 })();

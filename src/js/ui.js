@@ -1,4 +1,5 @@
-import {app} from './app'
+import {app} from './app';
+import {weatherData} from './weather';
 const ui = (() => {
   const location = document.querySelector('.city');
   const tempature = document.querySelector('.tempature');
@@ -13,7 +14,8 @@ const ui = (() => {
       var code = (e.keyCode ? e.keyCode : e.which);
       if (code === 13) {
         e.preventDefault();
-        console.log(search.value);
+        weatherData.weather(search.value);
+        message.Text = '';
         search.value = null;
       }
     });

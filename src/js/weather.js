@@ -1,22 +1,33 @@
-// const = ((weather) => )
-//     constructor(city){
-//         this.apiKey = '563a4032259d2eff8e4ec08a146fa0a4';
-//         this.city = city;
-//         this.url = 'api.openweathermap.org/data/2.5/weather?q=';
-//     }
+const weatherData = (() => {
+  const weather = (city) => {
+    const location = document.querySelector('.city');
+    const tempature = document.querySelector('.tempature');
+    const name = document.querySelector('.name');
+    const country = document.querySelector('.country');
+    const search = document.querySelector('.search');
 
-//     async getData() {
-//       const response = await fetch(`${this.url}${this.city}uk&appid=${this.apiKey}`);
-//       const jsonData = await respone.json();   
-//     }
+    const message = document.querySelector('.message');
+    const body = document.querySelector('body');
+    const apiKey = '607cb0d14a7ab93d6a5e4b35ab83ee70';
+    const api =`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
 
-//     changeCity(city) {
-//         this.city = city;
-//     }
-// }
+    fetch(api)
+      .then((response) => {
+        let data = response.json();
+        return data
+      })
+      .then((data) => {
+        location.innerText = data.name;
+        country.innerText = data.sys.country;
+        name.innerText= data.weather[0].description
+        tempature.innerText = Math.floor(data.main.temp - 273)
+      })
+      .catch((error) => {
+        message.innerText = 'Wrong city'
+      })
+  }
+  return { weather }
 
-const Weather = () => {
-  const apiKey = '563a4032259d2eff8e4ec08a146fa0a4';
-  const url = 'api.openweathermap.org/data/2.5/weather?q=';
-    
-}
+})();
+
+export { weatherData };

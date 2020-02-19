@@ -17,4 +17,6 @@
 
 const Weather = () => {
   const apiKey = '563a4032259d2eff8e4ec08a146fa0a4';
+  const url = 'api.openweathermap.org/data/2.5/weather?q=';
+    
 }

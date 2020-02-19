@@ -5,15 +5,9 @@ const ui = (() => {
   const name = document.querySelector('.name');
   const search = document.querySelector('.search');
   const message = document.querySelector('.message');
-  
+  const body = document.querySelector('body');
 
-  const userLocation = () => {
-    if('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(app.setPosition, app.getError);
-    }else {
-      message.innerText = 'Geolocation not supported for that browser';
-    }
-  }
+
   const dom = () => {
     search.addEventListener('keydown', (e) => {
       var code = (e.keyCode ? e.keyCode : e.which);
@@ -23,9 +17,8 @@ const ui = (() => {
         search.value = null;
       }
     });
-
   }
-  return {dom, userLocation,};
+  return {dom,};
 })();
 
 export { ui };

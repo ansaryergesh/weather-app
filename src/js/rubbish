@@ -1,0 +1,3 @@
+    let positions = [];
+      positions.push(latitude,longtitude)
+      return positions;

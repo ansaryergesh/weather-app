@@ -2,11 +2,28 @@ $cloudy-color: #106fc7;
 $rainy-color: #152636;
 body {
     background-color: black;
+    line-height: 1;
+}
+.container {
+  margin: auto;
+  width: 40%;
+}
+
+.message {
+  color: red;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search {
+  width:100%;
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 .weatherContainer {
   position: relative;
-  margin: auto;
-  width: 40%;
   border: 3px solid rgb(154, 160, 154);
   padding: 20px;
   color:rgb(255, 255, 255);

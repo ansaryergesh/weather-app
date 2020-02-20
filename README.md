@@ -20,7 +20,7 @@ npm run start
 
 ## Built With
 
-* MaterializeCSS and SASS
+* SASS
 * Javascript
 * Webpack
 

@@ -1,6 +1,7 @@
 # Weather App
 
 Weather App
+![screenshot](./image.jpg)
 
 ### Installing and Running program
 
@@ -19,7 +20,7 @@ npm run start
 
 ## Built With
 
-* MaterializeCSS and SASS
+* SASS
 * Javascript
 * Webpack
 

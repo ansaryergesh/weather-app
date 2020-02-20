@@ -32,9 +32,7 @@ const ui = (() => {
       tempUnit.innerText = Math.floor((currentValue-32) *5/9);
       tempType.innerText = celciuesType; 
     }
-    })
-
-
+    });
   }
 
   

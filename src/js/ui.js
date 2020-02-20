@@ -9,7 +9,6 @@ const ui = (() => {
   const body = document.querySelector('body');
   const weatherContainer = document.querySelector('.weatherContainer');
   const tempUnit = document.querySelector('.value');
-  const tempType = document.querySelector('.type');
   const dom = () => {
     search.addEventListener('keydown', (e) => {
       var code = (e.keyCode ? e.keyCode : e.which);
@@ -20,27 +19,11 @@ const ui = (() => {
         search.value = null;
       }
     });
-    tempUnit.addEventListener('click', () => {
-      const currentValue = tempUnit.innerText;
-      const celciuesType = "°C";
-      const fahrenheit = Math.floor((currentValue * 1.8) + 32); 
-      const fahrenheitType = "°F";
-      if (tempType.innerText === celciuesType) {
-      tempUnit.innerText = fahrenheit;
-      tempType.innerText = fahrenheitType; 
-    }else {
-      tempUnit.innerText = Math.floor((currentValue-32) *5/9);
-      tempType.innerText = celciuesType; 
-    }
-    });
   }
-
-  
 
   const setBackground = (data) => {
     weatherContainer.style.backgroundImage = `url("https://raw.githubusercontent.com/ansaryergesh/weather-app/master/src/images/${data}.jpg")`;
   }
-
 
   const render = () => {
     dom();

@@ -9,11 +9,10 @@ const weatherData = (() => {
     const humadity = document.querySelector('.humadity');
     const cloud = document.querySelector('.cloud');
     const wind = document.querySelector('.wind');
-
     const message = document.querySelector('.message');
     const body = document.querySelector('body');
     const apiKey = '607cb0d14a7ab93d6a5e4b35ab83ee70';
-    const api =`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+    const api =`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     await fetch(api)
       .then((response) => {
@@ -35,6 +34,7 @@ const weatherData = (() => {
         message.innerText = 'Wrong city'
       })
   }
+
   return { weather }
 
 })();

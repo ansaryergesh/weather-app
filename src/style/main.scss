@@ -1,11 +1,20 @@
 $cloudy-color: #106fc7;
 $rainy-color: #152636;
 body {
-    background-color: black;
+    background-color: rgb(16, 12, 37);
+    background-size: cover;    
+    background-position: center;
+    background-repeat: no-repeat;
     line-height: 1;
+    
 }
 .container {
-  margin: auto;
+  position: relative;
+  margin:auto;
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+  vertical-align: center;
   width: 40%;
 }
 
@@ -23,19 +32,47 @@ body {
   margin-bottom: 10px;
 }
 .weatherContainer {
-  position: relative;
+  color:white;
   border: 3px solid rgb(154, 160, 154);
   padding: 20px;
-  // background:rgba(19, 18, 18, 0.726) url("../images/01n.jpg");
   background-size: cover;    
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;  
+  opacity: .8;
   p,span {
     line-height: 0;
     -webkit-text-stroke-width: .9px;
     -webkit-text-stroke-color: rgb(107, 104, 104);
     letter-spacing: 2px;
+  }
+}
+
+.name {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.otherInfo {
+  background-color: white;
+  margin: 0;
+  padding: 20px 0;
+  ul {
+    margin: 0;
+    -moz-column-count: 3;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 50px;
+    column-count: 3;
+    column-gap: 50px;
+    i {
+      margin-left: 6px;
+    }
+    li {
+      list-style: none;
+    }
+  }
+  .info {
+    margin-top: 15px;
   }
 }
 
@@ -53,54 +90,6 @@ body {
     margin-left: 20px;
 }
 
-
-
-
-.cloudy {
-    height: 100%;
-    background: url(https://cdn.pixabay.com/photo/2018/05/16/01/45/clouds-3404728_960_720.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;            
-}
-
-.rainy {
-    height: 100%;
-    background: url(https://ak5.picdn.net/shutterstock/videos/12573965/thumb/1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.clear {
-  height: 100%;
-  background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJSk3Li4uFx8zODMsNyg5OjcBCgoKDg0NDg0NEisZFRk3Ny0tNysrKystLSstKzctKy0tKy0rKystKy0rLS0tNy03LS0rKzcrKy03LS0rKy0rLf/AABEIALcBFAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQMCBAX/xAAbEAEBAQEBAQEBAAAAAAAAAAAAEhEBAhMDYf/EABoBAQEBAQADAAAAAAAAAAAAAAABAgMEBgf/xAAZEQEBAQEBAQAAAAAAAAAAAAAAERITASH/2gAMAwEAAhEDEQA/APFDWDH0Z6NSB4MClgw8GBSwsawYFLBh4MKUsGNYMKVnA1gwpWQ1gxKVnDxrBhUrODGsGFKzgxrBhSlgwzKM4MaBRnDwxiJSwYeHgVnA1gwKQPBgUgeAKxh4YAsGNAKzgxoAzgxoYFZw8MYFLBhjApYDwYFIHh4JWQ1gxCkMPAUpYMawFKzgxrBglZw8PBgUg1gCshrAhSwYYwQsGNYMKVnA1gBPDMKtIHgCkDwAQaAVkY1gxKUgeDApDDGCUsGNAGcM8AFgwxgFgxrBiBA8GBSwY1gwSs4MawYFLBh4eBWcGNYMErODGsGJSlgawFKmDwYqkDwAQaGBWQ1gwKzh4eDApYMPDwKzgxrBgVnBjWDESlgawYUrIxrBhSs4eNYMKlZwY1h4lKzgxrBhSs4MawYVKzh4eHhSs4MawYlCwYeDApYDAlTwY1gxa1WcGNYeFKzgxrBhSs4MawYVKzh41gwpWcGNYMSlZwY1gwozh4eDApYMawYVKzgxrDwpWcGNYMSlZwY1h4VKzgxrDwpWMGN4MSlZwY3IkqVjBiknJRPBikiEq/U8C3PBGieufBjWDGqrOG1gwoyMawYVGcGN4MKM4Maw8SjGDG8GFGMGKSJKMYMUkSlJ6nh4pBwaWepYMWg4TRn1GRK8Hzwmlx6hJyvzwfPCaXmhzx04dHPBwmmubngfN0wITa83PzwcOiDk0vNz88HC8nKaax4hA54Xk5TRjxHngLSDTWXnwJdECHTTnzQgS6OeBBpObngQ6YEJo5ueDh0c8CDS80OeBDog4TS83PAh0QINHNDng4XgSml5o88HC0nKaXCENQrJymlyjBwrJyaXKUHKsiU0sTk5UkSlInJ88qScpViciVZElInIlWRKUiUnKsHBoiUiVoEJpYjJrQDRHHIlWRLdaicCVZEpoiUiVpEmiJSJVkSVInIlWRKUiUiVZElSJyJUk5KRKTlSDgpEsGK88HzwmiJYeKwcJpYjJytJymiIycLScppcpc8HCsnCaWJQJ4tBwmliMnK0HBoiE/w5Wg5TREZEryJTSxCQ6JBojzpPnlbnk4dNGUZErwcJpcoSJdHPzP5mjLmg4dEHCaMueDheDg0Zc8HC8nCaMueBDogQaMoQJdHzP5poy55EOj5n8zRlzwcOiDhNEc8HzwvJymiIQ1C0nCaIjA55XgQmliMnK0CU0RGTlaRJoRk5WkSmhKRK0iTQjIWkFHFzw1zwvzycNadsoQcLwcJoy55OHRAhNGXPB/N0QJNGUPmPm6IEJpMoQIXg4NGUIErwcGiOeDheBKaSIQcLScmkiEHC8HCaIhJyv8xz800ZQk5X+Z/M0Zc8iXTBwmjLmg4dEHCbXLmg4dEHBoy5/mPm6IOE0Zc8CHRA+Zoy54Dp+YNGXHzwcrQcrp5ERg4Wg4TSRCDheB8zREJEuj5iE0Zc8HK8HBoy55OF4OE0mXPBwvJwaMuf5nDog4TRlz88HC8HCaMoQJdEHzwaMOeDh0QcJtcOaDh0wcJtcOb5n83TBwmzm5vmfzdMHCbXm5vmPm6YEJtebn+Z/N0QcG15ub5n83TAhNnNzQTpkGjm87nNa54AdvWo1IkBlYciQCpBJyAEORJhKQSJASkPnk5ASk8ORICVZ4cnzyAUnhycgJVglqSCLDlrnkglXzw5OQEWHIwAWDDwAIeDDCLCwd4YRYzgAWpH/9k=);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.clearNight {
-  height: 100%;
-  background: url(https://c4.wallpaperflare.com/wallpaper/777/422/528/night-sky-wallpaper-preview.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.snowy {
-  height: 100%;
-  background: url(https://images.unsplash.com/photo-1547754980-3df97fed72a8?ixlib=rb-1.2.1&w=1000&q=80);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.snowyNight {
-    height: 100%;
-    background: url(https://wallpaperstock.net/snowy-night_wallpapers_39642_2560x1440.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 // animations 
 @keyframes wind{
     0% {

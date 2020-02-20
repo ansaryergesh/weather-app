@@ -2,10 +2,13 @@ import {ui} from './ui';
 const weatherData = (() => {
   const weather = async (city) => {
     const location = document.querySelector('.city');
-    const tempature = document.querySelector('.tempature');
+    const tempature = document.querySelector('.value');
     const name = document.querySelector('.name');
     const country = document.querySelector('.country');
     const search = document.querySelector('.search');
+    const humadity = document.querySelector('.humadity');
+    const cloud = document.querySelector('.cloud');
+    const wind = document.querySelector('.wind');
 
     const message = document.querySelector('.message');
     const body = document.querySelector('body');
@@ -22,8 +25,12 @@ const weatherData = (() => {
         country.innerText = data.sys.country;
         name.innerText= data.weather[0].description;
         tempature.innerText = Math.floor(data.main.temp - 273);
+        wind.innerText = Math.floor(data.wind.speed);
+        cloud.innerText = data.clouds.all;
+        humadity.innerText = data.main.humidity;
         ui.setBackground(data.weather[0].icon);
       })
+      
       .catch((error) => {
         message.innerText = 'Wrong city'
       })

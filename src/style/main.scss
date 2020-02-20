@@ -1,12 +1,15 @@
 $cloudy-color: #106fc7;
 $rainy-color: #152636;
 body {
-    background-color: rgb(16, 12, 37);
+    background: url("https://live.staticflickr.com/4833/45023948035_fe5849be14_b.jpg");
     background-size: cover;    
     background-position: center;
     background-repeat: no-repeat;
     line-height: 1;
     
+}
+.value {
+  cursor: pointer;
 }
 .container {
   position: relative;
@@ -15,7 +18,7 @@ body {
   max-height:100%;
   overflow:auto;
   vertical-align: center;
-  width: 40%;
+  width: 30%;
 }
 
 .message {
@@ -32,30 +35,28 @@ body {
   margin-bottom: 10px;
 }
 .weatherContainer {
+  text-align: center;
   color:white;
   border: 3px solid rgb(154, 160, 154);
-  padding: 20px;
+  border-bottom: 2px solid rgb(41, 40, 40);
+  padding: 50px 20px;
   background-size: cover;    
   background-position: center;
   background-repeat: no-repeat;
-  opacity: .8;
-  p,span {
-    line-height: 0;
-    -webkit-text-stroke-width: .9px;
-    -webkit-text-stroke-color: rgb(107, 104, 104);
-    letter-spacing: 2px;
-  }
-}
+  font-weight: 900;
+  opacity: .9;
 
+}
 .name {
   font-weight: bold;
   font-size: 25px;
+  text-transform: capitalize;
 }
 
 .otherInfo {
-  background-color: white;
+  background-color: rgb(210, 214, 193);
   margin: 0;
-  padding: 20px 0;
+  padding: 40px 0;
   ul {
     margin: 0;
     -moz-column-count: 3;
@@ -82,21 +83,46 @@ body {
 }
 .name {
     margin-bottom: 50px;
-    margin-left: 20px;
 }
 
 .tempature {
     font-size: 55px;
-    margin-left: 20px;
+    box-sizing: border-box;
 }
 
-// animations 
-@keyframes wind{
-    0% {
-      background-position: 0 200px, 0 300px, 100px 250px;
-    }
-    100% {
-      background-position: 1000px 200px, 1200px 300px, 1100px 250px;
-    }
-  
+// media queries
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%;
   }
+
+  .otherInfo {
+    ul {
+      margin: 0;
+      -moz-column-count: 3;
+      -moz-column-gap: 10px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 10px;
+      column-count: 3;
+      column-gap: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width:767px) and (max-width: 1020px) {
+  .container {
+    width: 50%;
+  }
+
+  .otherInfo {
+    ul {
+      margin: 0;
+      -moz-column-count: 3;
+      -moz-column-gap: 15px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 15px;
+      column-count: 3;
+      column-gap: 15px;
+    }
+  }
+}

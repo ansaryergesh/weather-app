@@ -18,14 +18,21 @@ const ui = (() => {
         search.value = null;
       }
     });
-    app.userLocation();
-    app.setPosition();
   }
+
+  
 
   const setBackground = (data) => {
     weatherContainer.style.backgroundImage = `url("https://raw.githubusercontent.com/ansaryergesh/weather-app/master/src/images/${data}.jpg")`;
   }
-  return {dom,setBackground};
+
+
+  const render = () => {
+    dom();
+    app.userLocation();
+    app.setPosition();
+  }
+  return {dom,setBackground,render,};
 })();
 
 export { ui };

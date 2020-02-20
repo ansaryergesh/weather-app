@@ -38,7 +38,8 @@ const app = (() => {
             document.querySelector('.message').innerText = 'Something went wrong'
         });
   }
-  return{userLocation,checkCity,setPosition}
+
+  return{userLocation,checkCity,setPosition,}
 })();
 
 

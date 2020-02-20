@@ -1,3 +1,4 @@
+import {weatherData} from './weather';
 const app = (() => {
   let location;
   const message = document.querySelector('.message');
@@ -21,20 +22,24 @@ const app = (() => {
   }
 
 
-  const checkCity = (latitude,longitude) => {
-    const apiKey = '563a4032259d2eff8e4ec08a146fa0a4';
+  const checkCity = async(latitude,longitude) => {
+    const apiKey = '607cb0d14a7ab93d6a5e4b35ab83ee70';
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
-    fetch(api)
+    await fetch(api)
         .then((response) => {
             let data = response.json();
             return data
         })
         .then((data) => {
-            document.querySelector('.search').value = data.name;
+            weatherData.weather(data.name);
         })
+        .catch((error) => {
+            document.querySelector('.message').innerText = 'Something went wrong'
+        });
   }
-  return{userLocation,checkCity,setPosition}
+
+  return{userLocation,checkCity,setPosition,}
 })();
 
 

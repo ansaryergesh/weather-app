@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Weather App</title>
 </head>
 <body>
     <div class="container">
         <input class="search" type="search" id="gsearch" placeholder="City name" name="gsearch">
          <p class="message"></p>
-            <div class="weatherContainer snowyNight">
+            <div class="weatherContainer">
                 <div id="typeWeather" class="">
-                    <p class="city">City, Country</p>
-                    <p class="tempature"><span class="value">5</span> <span class="type">°</span> <i class="timeIcon"></i></p>
+                    <p class="city">City,  </p>
+                    <span class="country">Country</span>
+                    <p class="tempature"><span class="value">5</span> <span class="type"></span> <i class="timeIcon"></i></p>
                     <p class="name">Cloudy</p>
+                
                 </div>
+            </div>
+
+            <div class="otherInfo">
+                <ul class="main">
+                    <li>Humadity<i class ="fas fa-temperature-high"></i></li>
+                    <li>Cloudy <i class="fas fa-cloud-sun"></i></li>
+                    <li>Wind <i class="fas fa-wind"></i></li>
+                </ul>
+                <ul class = "info">
+                    <li><span class="humadity">0</span> %</li>
+                    <li><span class="cloud">0</span> %</li>
+                    <li><span class="wind">0</span> <span>m/s</span></li>
+                </ul>
             </div>
 
     </div>

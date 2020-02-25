@@ -1,14 +1,14 @@
 # Weather App
 
 Weather App
-![screenshot](./image.jpg)
+![screenshot](./image1.jpg)
 
 ### Installing and Running program
 
 ```
 npm run install
 
-npm run build 
+npm run build
 
 npm run start
 
@@ -20,9 +20,9 @@ npm run start
 
 ## Built With
 
-* SASS
-* Javascript
-* Webpack
+- SASS
+- Javascript
+- Webpack
 
 ## Author:
 
@@ -31,7 +31,6 @@ npm run start
 - Github: [@ansaryergesh](https://github.com/ansaryergesh)
 - Twitter: [@ansaryergesh](https://twitter.com/ansaryergesh)
 - Linkedin: [Ansar Yergeshov](https://www.linkedin.com/in/ansaryergesh/)
-
 
 ## 🤝 Contributing
 

@@ -1,6 +1,6 @@
 # Weather App
 
-Weather App
+Weather App with function to detect current location
 ![screenshot](./image.jpg)
 
 ### Installing and Running program

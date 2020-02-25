@@ -1,7 +1,7 @@
 # Weather App
 
 Weather App
-![screenshot](./image1.jpg)
+![screenshot](./image.jpg)
 
 ### Installing and Running program
 

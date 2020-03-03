@@ -13,7 +13,7 @@ const weatherData = (() => {
     const body = document.querySelector('body');
     const type = document.querySelector('.type');
     const apiKey = '607cb0d14a7ab93d6a5e4b35ab83ee70';
-    const api =`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const api =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     let temp = {};
 
     await fetch(api)

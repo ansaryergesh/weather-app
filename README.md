@@ -31,6 +31,7 @@ npm run start
 - Github: [@ansaryergesh](https://github.com/ansaryergesh)
 - Twitter: [@ansaryergesh](https://twitter.com/ansaryergesh)
 - Linkedin: [Ansar Yergeshov](https://www.linkedin.com/in/ansaryergesh/)
+- Gmail: yergeshovansar@gmail.com
 
 
 ## 🤝 Contributing

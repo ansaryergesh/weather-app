@@ -16,6 +16,9 @@ npm run start
 
 ## Live Demo
 
+## Future Features
+Make it more functional and improve UI
+
 [Live Demo](https://ansaryergesh.github.io/weather-app/)
 
 ## Built With

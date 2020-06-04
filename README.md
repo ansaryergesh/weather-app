@@ -19,12 +19,12 @@ npm run start
 
 ## Future Features
 - Make it more functional
-- Imporve User Interface design
+- Improve User Interface design
 
 ## Built With
 
 * SASS
-* Javascript
+* JavaScript
 * Webpack
 
 ## Author:

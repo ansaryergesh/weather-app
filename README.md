@@ -1,6 +1,8 @@
 # Weather App
 
-Weather App with function to detect current location.
+A weather app that pulls from the OpenWeatherMap API to allow users to search for and view the forecast in cities worldwide. Built with JavaScript. In additionaly in application have function to detect current location address.
+
+### Screenshots
 ![screenshot](./image.jpg)
 
 ### Installing and Running program
